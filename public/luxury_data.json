@@ -1,0 +1,110 @@
+[
+    {
+      "image": "penthouse_image.jpg",
+      "estate_title": "Luxury Penthouse with City Views",
+      "id": "1",
+      "segment_name": "Penthouse",
+      "description": "Stunning penthouse offering breathtaking views of the city skyline.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "3000 sq ft",
+      "location": "Metropolis",
+      "facilities": ["Spacious Living Room", "Infinity Pool", "Gourmet Kitchen"]
+    },
+    {
+      "image": "beachfront_property_image.jpg",
+      "estate_title": "Exclusive Beachfront Property",
+      "id": "2",
+      "segment_name": "Beachfront Property",
+      "description": "An exclusive beachfront property offering unparalleled luxury and tranquility.",
+      "price": "$8,000,000",
+      "status": "sale",
+      "area": "1 acre",
+      "location": "Tropical Island",
+      "facilities": ["Private Beach Access", "Infinity Pool", "Outdoor Dining Area"]
+    },
+    {
+      "image": "resort_image.jpg",
+      "estate_title": "Luxury Resort & Spa",
+      "id": "3",
+      "segment_name": "Resort",
+      "description": "Escape to a world of luxury and relaxation at this exquisite resort and spa.",
+      "price": "$20,000,000",
+      "status": "sale",
+      "area": "10 acres",
+      "location": "Tropical Paradise",
+      "facilities": ["Private Villas", "Infinity Pool", "Spa & Wellness Center"]
+    },
+    {
+      "image": "private_island_image.jpg",
+      "estate_title": "Private Island Retreat",
+      "id": "4",
+      "segment_name": "Private Island",
+      "description": "Own your private sanctuary surrounded by pristine waters and lush greenery.",
+      "price": "$50,000,000",
+      "status": "sale",
+      "area": "50 acres",
+      "location": "Remote Island",
+      "facilities": ["Luxury Villas", "Helipad", "Yacht Marina"]
+    },
+    {
+      "image": "villa_image.jpg",
+      "estate_title": "Luxury Villa with Ocean Views",
+      "id": "5",
+      "segment_name": "Villa",
+      "description": "Indulge in the epitome of elegance and luxury in this stunning oceanfront villa.",
+      "price": "$7,500,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "Coastal Cliff",
+      "facilities": ["Oceanfront Terrace", "Private Cinema", "Wine Cellar"]
+    },
+    {
+      "image": "mansion_image.jpg",
+      "estate_title": "Grand Mansion Estate",
+      "id": "6",
+      "segment_name": "Mansion",
+      "description": "Live in luxury and grandeur in this palatial mansion estate.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "15000 sq ft",
+      "location": "Luxury Neighborhood",
+      "facilities": ["Ballroom", "Indoor Pool", "Home Theater"]
+    },
+    {
+      "image": "penthouse_image2.jpg",
+      "estate_title": "Modern Penthouse with Skyline Views",
+      "id": "7",
+      "segment_name": "Penthouse",
+      "description": "Contemporary penthouse with expansive views of the city skyline.",
+      "price": "$4,000,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "Downtown",
+      "facilities": ["Open Floor Plan", "Rooftop Terrace", "Smart Home Technology"]
+    },
+    {
+      "image": "beachfront_villa_image.jpg",
+      "estate_title": "Luxury Beachfront Villa",
+      "id": "8",
+      "segment_name": "Villa",
+      "description": "Elegant villa nestled along the pristine shoreline with panoramic ocean views.",
+      "price": "$10,000,000",
+      "status": "sale",
+      "area": "6000 sq ft",
+      "location": "Seaside Resort",
+      "facilities": ["Private Beach Access", "Infinity Pool", "Outdoor Kitchen"]
+    },
+    {
+      "image": "private_island_image2.jpg",
+      "estate_title": "Exclusive Private Island Paradise",
+      "id": "9",
+      "segment_name": "Private Island",
+      "description": "Experience ultimate luxury and seclusion on your own private island paradise.",
+      "price": "$100,000,000",
+      "status": "sale",
+      "area": "100 acres",
+      "location": "Tropical Archipelago",
+      "facilities": ["Luxury Villas", "Helipad", "Yacht Club"]
+    }
+  ]
