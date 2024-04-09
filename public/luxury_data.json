@@ -1,6 +1,6 @@
 [
     {
-      "image": "penthouse_image.jpg",
+      "image": "https://i.ibb.co/DMWwy5N/image1.jpg",
       "estate_title": "Luxury Penthouse with City Views",
       "id": "1",
       "segment_name": "Penthouse",
@@ -12,7 +12,7 @@
       "facilities": ["Spacious Living Room", "Infinity Pool", "Gourmet Kitchen"]
     },
     {
-      "image": "beachfront_property_image.jpg",
+      "image": "https://i.ibb.co/bzwR4Pn/image2.jpg",
       "estate_title": "Exclusive Beachfront Property",
       "id": "2",
       "segment_name": "Beachfront Property",
@@ -24,7 +24,7 @@
       "facilities": ["Private Beach Access", "Infinity Pool", "Outdoor Dining Area"]
     },
     {
-      "image": "resort_image.jpg",
+      "image": "https://i.ibb.co/R6PfrMj/image3.jpg",
       "estate_title": "Luxury Resort & Spa",
       "id": "3",
       "segment_name": "Resort",
@@ -36,7 +36,7 @@
       "facilities": ["Private Villas", "Infinity Pool", "Spa & Wellness Center"]
     },
     {
-      "image": "private_island_image.jpg",
+      "image": "https://i.ibb.co/FXV5QCZ/image4.jpg",
       "estate_title": "Private Island Retreat",
       "id": "4",
       "segment_name": "Private Island",
@@ -48,7 +48,7 @@
       "facilities": ["Luxury Villas", "Helipad", "Yacht Marina"]
     },
     {
-      "image": "villa_image.jpg",
+      "image": "https://i.ibb.co/BcZwyCm/image5.jpg",
       "estate_title": "Luxury Villa with Ocean Views",
       "id": "5",
       "segment_name": "Villa",
@@ -60,7 +60,7 @@
       "facilities": ["Oceanfront Terrace", "Private Cinema", "Wine Cellar"]
     },
     {
-      "image": "mansion_image.jpg",
+      "image": "https://i.ibb.co/LSrnJcx/frames-for-your-heart-m-R1-CIDdu-GLc-unsplash.jpg",
       "estate_title": "Grand Mansion Estate",
       "id": "6",
       "segment_name": "Mansion",
@@ -72,7 +72,7 @@
       "facilities": ["Ballroom", "Indoor Pool", "Home Theater"]
     },
     {
-      "image": "penthouse_image2.jpg",
+      "image": "https://i.ibb.co/ZfMvJfH/lauren-pelesky-2-B9-Fyw-Kn-No-unsplash.jpg",
       "estate_title": "Modern Penthouse with Skyline Views",
       "id": "7",
       "segment_name": "Penthouse",
@@ -84,7 +84,7 @@
       "facilities": ["Open Floor Plan", "Rooftop Terrace", "Smart Home Technology"]
     },
     {
-      "image": "beachfront_villa_image.jpg",
+      "image": "https://i.ibb.co/p13RkdD/image8.jpg",
       "estate_title": "Luxury Beachfront Villa",
       "id": "8",
       "segment_name": "Villa",
@@ -96,7 +96,7 @@
       "facilities": ["Private Beach Access", "Infinity Pool", "Outdoor Kitchen"]
     },
     {
-      "image": "private_island_image2.jpg",
+      "image": "https://media.cnn.com/api/v1/images/stellar/prod/200513125825-07-gladden-private-island.jpg?q=w_1110,c_fill/f_webp",
       "estate_title": "Exclusive Private Island Paradise",
       "id": "9",
       "segment_name": "Private Island",
