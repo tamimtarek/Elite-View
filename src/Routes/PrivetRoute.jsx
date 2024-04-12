@@ -7,7 +7,7 @@ const PrivetRoute = ({children}) => {
     const {user} = useContext(AuthContext);
 
     if(!user){
-        return <Navigate to="/login" state={location.pathname}></Navigate>
+        return <Navigate to="/login" state={location?.pathname || "/"}></Navigate>
     }
     return (
         <div>

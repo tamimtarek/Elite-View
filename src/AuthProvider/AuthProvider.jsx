@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../Firebase/firebase.config";
 export const AuthContext = createContext(null);
 const googleProvider =new GoogleAuthProvider();
@@ -38,6 +38,13 @@ const AuthProvider = ({children}) => {
         .then(data=> setCards(data))
     }, []);
 
+    const updateUserProfile=(name, image) => {
+        return updateProfile(auth.currentUser, {
+             displayName: name, 
+             photoURL: image
+           })
+     }
+
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             console.log("user on the state", currentUser);
@@ -58,6 +65,7 @@ const AuthProvider = ({children}) => {
         googleUser,
         facebookUser,
         cards,
+        updateUserProfile
     }
 
     return (

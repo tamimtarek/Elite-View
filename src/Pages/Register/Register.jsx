@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet";
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
+    const {createUser, updateUserProfile} = useContext(AuthContext);
 
 
     const handleRegister = e => {
@@ -41,7 +41,8 @@ const Register = () => {
         }
         createUser(email, password)
         .then(() => {
-            toast.success("Successfully create your account")
+            updateUserProfile(name, photo).then(toast.success("Successfully create your account"))
+            
         })
         .catch(error => {
             toast.warning(error.message)

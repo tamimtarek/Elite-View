@@ -4,14 +4,17 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/updateprofile">Update Profile</NavLink></li>
-        <li><NavLink to="/profile">Profile</NavLink></li>
+         <li><NavLink to="/profile">Profile</NavLink></li>
     </>
-    const {user, logOut} = useContext(AuthContext);
 
-    
+    const handleLogout = e => {
+        e.preventDefault();
+        return logOut();
+    }
 
     return (
         <div className="navbar bg-slate-600 bg-transparent">
@@ -33,12 +36,14 @@ const Navbar = () => {
             </div>
             <div className="navbar-end space-x-3">
                 <div className="w-10">
-                    <Link to="/profile"><img alt="Tailwind CSS Navbar component" title={user?.email} className="rounded-full" src={user?.photoURL} /></Link>
+                    {
+                        user && <Link to="/profile"><img alt="" title={user.displayName} className="rounded-full" src={user.photoURL} /></Link>
+                    }
                 </div>
                 {
-                    user ? <Link to="/login" className="btn">Log Out</Link>:<Link to="/login" className="btn">Login</Link>
+                    user ? <Link to="/login"><button onClick={handleLogout} className="btn">Log Out</button></Link> : <Link to="/login" ><button className="btn">Login</button></Link>
                 }
-                
+
             </div>
         </div>
     );
