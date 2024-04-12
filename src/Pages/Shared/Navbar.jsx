@@ -1,13 +1,18 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const Navbar = () => {
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/property">Property</NavLink></li>
-        <li><NavLink to="/login">Login</NavLink></li>
-        <li><NavLink to="/register">Register</NavLink></li>
+        <li><NavLink to="/updateprofile">Update Profile</NavLink></li>
+        <li><NavLink to="/profile">Profile</NavLink></li>
     </>
+    const {user, logOut} = useContext(AuthContext);
+
+    
+
     return (
         <div className="navbar bg-slate-600 bg-transparent">
             <div className="navbar-start">
@@ -19,7 +24,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Elit View</a>
+                <a className="btn btn-ghost text-xl lg:text-3xl font-black">Elite View</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -28,9 +33,12 @@ const Navbar = () => {
             </div>
             <div className="navbar-end space-x-3">
                 <div className="w-10">
-                    <img alt="Tailwind CSS Navbar component" title="User" className="rounded-full" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    <Link to="/profile"><img alt="Tailwind CSS Navbar component" title={user?.email} className="rounded-full" src={user?.photoURL} /></Link>
                 </div>
-                <a className="btn">Login</a>
+                {
+                    user ? <Link to="/login" className="btn">Log Out</Link>:<Link to="/login" className="btn">Login</Link>
+                }
+                
             </div>
         </div>
     );

@@ -1,11 +1,10 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 const Register = () => {
-    const [success, setSeccess] = useState('');
-    const [error, setError] = useState('');
     const {createUser} = useContext(AuthContext);
 
 
@@ -17,36 +16,44 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('createPassword');
         const confirmPassword = form.get('confirmPassword');
-        setError('');
-        setSeccess('');
         console.log(name, photo, email, password);
 
-        if(!/@gamil\.com$/.test(email)){
-            setError('Email ends With @gmail.com')
+        if(!/@gmail\.com$/.test(email)){
+            toast.warning('Email ends With @gmail.com')
             return
         }
 
-        if(!/\d.*\d.*$/.test(password)){
-            setError('You should use at least 2 number')
-            return
+        if(!/[A-Z]/.test(password)){
+            return toast.warning('You Must use an uppercase in the password')
+        }
+
+        if(!/[a-z]/.test(password)){
+            return toast.warning('You Must use a Lowercase in the password')
+        }
+
+        if(password.length < 6){
+            return toast.warning ('Password Must be at least 6 character')
         }
 
         if(password !==confirmPassword){
-            setError('Password did not match')
+            toast.warning('Password did not match')
             return
         }
         createUser(email, password)
         .then(() => {
-            setSeccess("Successfully create your account")
+            toast.success("Successfully create your account")
         })
         .catch(error => {
-            setError(error.message)
+            toast.warning(error.message)
         })
         
     }
 
     return (
         <div className="flex mx-auto mt-7 flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-200 dark:text-gray-800">
+            <Helmet>
+                <title>Elite View | Register</title>
+            </Helmet>
             <div className="mb-8 text-center">
                 <h1 className="my-3 text-4xl font-bold">Register Now</h1>
             </div>
@@ -73,12 +80,6 @@ const Register = () => {
                         <input type="text" required name="confirmPassword" placeholder="Confirm Password" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
                     </div>
                    
-                    {
-                        success && <p className="text-green-600 text-sm">{success}</p>
-                    }
-                    {
-                        error && <p className="text-red-500 text-sm">{error}</p>
-                    }
                 </div>
                 <div className="space-y-2">
                     <div>
@@ -89,6 +90,7 @@ const Register = () => {
                     </p>
                 </div>
             </form>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

@@ -1,11 +1,22 @@
 import { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import auth from "../Firebase/firebase.config";
 export const AuthContext = createContext(null);
-
+const googleProvider =new GoogleAuthProvider();
+const facebookProvider = new FacebookAuthProvider();
 const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
+    const [cards, setCards] = useState();
+    const googleUser = () =>{
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider);
+    }
+
+    const facebookUser = () => {
+        setLoading (true);
+        return signInWithPopup(auth, facebookProvider);
+    }
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -21,6 +32,11 @@ const AuthProvider = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password);
         
     }
+    useEffect (()=>{
+        fetch("luxury_data.json")
+        .then(res => res.json())
+        .then(data=> setCards(data))
+    }, []);
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
@@ -38,7 +54,10 @@ const AuthProvider = ({children}) => {
         createUser,
         logOut,
         login,
-        loading
+        loading,
+        googleUser,
+        facebookUser,
+        cards,
     }
 
     return (
