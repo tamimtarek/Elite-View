@@ -42,7 +42,7 @@ const Register = () => {
         createUser(email, password)
         .then(() => {
             updateUserProfile(name, photo).then(toast.success("Successfully create your account"))
-            
+            e.target.reset();
         })
         .catch(error => {
             toast.warning(error.message)
@@ -51,7 +51,7 @@ const Register = () => {
     }
 
     return (
-        <div className="flex mx-auto mt-7 flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-200 dark:text-gray-800">
+        <div data-aos="zoom-in-up" data-aos-duration="1000" className="flex mx-auto mt-7 flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-200 dark:text-gray-800">
             <Helmet>
                 <title>Elite View | Register</title>
             </Helmet>
@@ -84,7 +84,7 @@ const Register = () => {
                 </div>
                 <div className="space-y-2">
                     <div>
-                        <button className=" btn w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">Sign in</button>
+                        <button className=" btn w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">Register</button>
                     </div>
                     <p className="px-6 text-sm text-center dark:text-gray-600">Already have an account?
                         <Link to="/login" className="hover:underline font-bold dark:text-violet-600">Login</Link>.

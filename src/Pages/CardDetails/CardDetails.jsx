@@ -7,7 +7,7 @@ const CardDetails = () => {
     const { cards } = useContext(AuthContext);
     console.log(cards)
     const { id } = useParams();
-    const cardContent = cards.find(card => card.id === id);
+    const cardContent = cards.find(card => card.id == id);
     console.log(cardContent)
     const { image, estate_title, area, segment_name, price,
         location, description, facilities, status } = cardContent;

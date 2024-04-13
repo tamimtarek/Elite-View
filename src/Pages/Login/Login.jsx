@@ -46,7 +46,7 @@ const Login = () => {
     }
 
     return (
-        <div className="flex mx-auto mt-10 flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-200 dark:text-gray-800">
+        <div data-aos="zoom-in-up" data-aos-duration="1000" className="flex mx-auto mt-10 flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-200 dark:text-gray-800">
             <Helmet>
                 <title>
                     Elite View | Login
@@ -55,7 +55,7 @@ const Login = () => {
             <div className="mb-8 text-center">
                 <h1 className="my-3 text-4xl font-bold">Please Login</h1>
             </div>
-            <form onSubmit={handleLogin} noValidate="" action="" className="space-y-12">
+            <form  onSubmit={handleLogin} noValidate="" action="" className="space-y-12">
                 <div className="space-y-4">
                     <div>
                         <label htmlFor="email" className="block mb-2 text-sm">Email address</label>

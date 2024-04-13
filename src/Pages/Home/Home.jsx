@@ -35,7 +35,7 @@ const Home = () => {
                     >
                         <SwiperSlide>
                             <div className='absolute w-full z-10 rounded-lg pl-14 bg-gradient-to-r from-purple-400 h-full text-white'>
-                                <h2 className='lg:text-4xl mt-4 lg:mt-20 font-bold'>Welcome To Elite View</h2>
+                                <h2 className='text-center lg:text-4xl mt-4 lg:mt-20 font-bold'>Welcome To Elite View</h2>
                             </div>
                             <img className='rounded-lg' src={image1} alt="" />
                         </SwiperSlide>

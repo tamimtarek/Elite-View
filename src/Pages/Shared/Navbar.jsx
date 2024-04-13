@@ -37,7 +37,7 @@ const Navbar = () => {
             <div className="navbar-end space-x-3">
                 <div className="w-10">
                     {
-                        user && <Link to="/profile"><img alt="" title={user.displayName} className="rounded-full" src={user.photoURL} /></Link>
+                        user && <Link to="/profile"><img src={user?.photoURL} alt="" title={user.displayName} className="rounded-full"  /></Link>
                     }
                 </div>
                 {

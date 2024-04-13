@@ -24,16 +24,17 @@ const AuthProvider = ({children}) => {
     }
 
     const logOut = () => {
+        setLoading(true);
         return signOut(auth);
     }
     
     const login =(email, password) => {
-        setLoading(true)
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
         
     }
     useEffect (()=>{
-        fetch("luxury_data.json")
+        fetch("/luxury_data.json")
         .then(res => res.json())
         .then(data=> setCards(data))
     }, []);
