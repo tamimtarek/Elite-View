@@ -7,8 +7,6 @@ const CardDetails = () => {
     const { cards } = useContext(AuthContext);
     console.log(cards)
     const { id } = useParams();
-    console.log(id)
-    // const idnt = parseInt(id);
     const cardContent = cards.find(card => card.id === id);
     console.log(cardContent)
     const { image, estate_title, area, segment_name, price,
@@ -25,6 +23,7 @@ const CardDetails = () => {
                 <p><span className="font-bold">Description:</span> {description}</p>
                 <h3><span className="font-bold">Status:</span> {status}</h3>
                 <h3><span className="font-bold">Price: </span> {price}</h3>
+                <h3><span className="font-bold">Area: </span> {area}</h3>
                 <h3><span className="font-bold">Location:</span> {location}</h3>
                 <h3><span className="font-bold">Facilities: </span>{facilities.slice().join(', ')}</h3>
             </div>
