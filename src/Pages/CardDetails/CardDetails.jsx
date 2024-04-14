@@ -13,7 +13,7 @@ const CardDetails = () => {
         location, description, facilities, status } = cardContent;
     return (
         <div className="card lg:w-[1280px] mt-11 mx-auto bg-base-100">
-            <img className="rounded-t-lg" src={image} alt="" />
+            <img data-aos="zoom-in-left" data-aos-duration="1000" className="rounded-t-lg" src={image} alt="" />
             <div className="card-body">
                 <h2 className="card-title flex items-center">
                     <h2 className="text-3xl font-bold">{estate_title}</h2>

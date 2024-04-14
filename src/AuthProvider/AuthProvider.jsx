@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from "react";
 import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../Firebase/firebase.config";
+import { flushSync } from "react-dom";
 export const AuthContext = createContext(null);
 const googleProvider =new GoogleAuthProvider();
 const facebookProvider = new FacebookAuthProvider();
 const AuthProvider = ({children}) => {
+    const [reload, setReload] = useState(false);
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
     const [cards, setCards] = useState();
@@ -55,7 +57,7 @@ const AuthProvider = ({children}) => {
         return () => {
             unSubscribe();
         }
-    }, [])
+    }, [reload])
 
     const authInfo = {
         user,
@@ -66,7 +68,8 @@ const AuthProvider = ({children}) => {
         googleUser,
         facebookUser,
         cards,
-        updateUserProfile
+        updateUserProfile,
+        setReload
     }
 
     return (
