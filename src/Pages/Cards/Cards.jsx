@@ -6,7 +6,7 @@ const Cards = ({ card }) => {
     console.log(card)
     return (
         <div >
-            <div data-aos="zoom-in-right" data-aos-duration="1000" className="card w-full bg-base-100 h-full border-2">
+            <div data-aos="zoom-in-right" data-aos-duration="1000" className="card bg-base-100 h-full border-2">
                 <figure><img src={image} alt="comfort" /></figure>
                 <div className="card-body">
                     <h2 data-aos="fade-left" data-aos-duration="300" className="card-title flex justify-between">

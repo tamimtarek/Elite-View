@@ -9,6 +9,7 @@ import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import PrivetRoute from "./PrivetRoute";
 import CardDetails from "../Pages/CardDetails/CardDetails";
 import Error from "../Pages/Error/Error";
+import About from "../Pages/About/About";
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
         {
           path: "/property/:id",
           element: <PrivetRoute><CardDetails></CardDetails></PrivetRoute>
+        },
+        {
+          path: "/about",
+          element: <About></About>
         }
       ]
     },

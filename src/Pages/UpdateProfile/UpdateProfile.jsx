@@ -8,7 +8,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const UpdateProfile = () => {
-    const { updateUserProfile } = useContext(AuthContext);
+    const { updateUserProfile, user } = useContext(AuthContext);
     const handleUpdateProfile = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
@@ -23,7 +23,7 @@ const UpdateProfile = () => {
 
     return (
         <div>
-            <div className="flex mx-auto mt-7 flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-200 dark:text-gray-800">
+            <div data-aos="zoom-in-up" data-aos-duration="1000" className="flex mx-auto mt-7 flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-200 dark:text-gray-800">
                 <Helmet>
                     <title>Elite View | UpdateProfile</title>
                 </Helmet>
@@ -34,7 +34,7 @@ const UpdateProfile = () => {
                     <div className="space-y-4">
                         <div>
                             <label htmlFor="name" className="block mb-2 text-sm">Name</label>
-                            <input type="text" required name="name" placeholder="Enter Your Name" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
+                            <input type="text" required name="name" placeholder={user.displayName} className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
                         </div>
                         <div>
                             <label htmlFor="photoUrl" className="block mb-2 text-sm">Photo URL</label>
@@ -48,8 +48,8 @@ const UpdateProfile = () => {
 
                     </div>
                 </form>
-                <ToastContainer></ToastContainer>
             </div>
+                <ToastContainer></ToastContainer>
         </div>
     );
 };

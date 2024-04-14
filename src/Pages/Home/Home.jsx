@@ -71,7 +71,7 @@ const Home = () => {
                         </SwiperSlide>
                     </Swiper>
                 </div>
-                <div className='text-center mt-8'>
+                <div className='text-center lg:w-[1200px] mx-auto mt-8'>
                     <h1 className='text-lg mb-6 md:text-2xl lg:text-4xl  font-semibold'>Find Your Comfort</h1>
                     <p>Add your dream property to the cart. Find your comfort with Elite View, where luxury meets <br /> tranquility in every exquisite detail.</p>
                     <div className='mt-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 justify-center'>
@@ -179,7 +179,7 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex border flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 dark:bg-gray-50 dark:text-gray-800">
+                        <div className="flex border justify-center flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 dark:bg-gray-50 dark:text-gray-800">
                             <div className="flex flex-col items-center w-full">
                                 <h2 className="text-3xl font-semibold text-center">Your opinion matters!</h2>
                                 <div className="flex flex-col items-center py-6 space-y-3">

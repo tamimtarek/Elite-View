@@ -1,4 +1,14 @@
-# React + Vite
+# Elite View
+
+website link: https://fearful-arch.surge.sh/
+
+--------FEATURES---------
+
+
+--------NPM Package-------
+1. Swiper Slider - [npm i swiper]
+2. AOS Pachage -[npm install --save aos@next]
+3. React-leaflet - [npm install react-leaflet]
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

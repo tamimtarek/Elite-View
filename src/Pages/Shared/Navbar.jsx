@@ -9,6 +9,7 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/updateprofile">Update Profile</NavLink></li>
          <li><NavLink to="/profile">Profile</NavLink></li>
+         <li><NavLink to="/about">About</NavLink></li>
     </>
 
     const handleLogout = e => {
