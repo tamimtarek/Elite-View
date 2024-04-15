@@ -36,8 +36,8 @@ const Home = () => {
                         <SwiperSlide>
                             <div className='absolute w-full z-10 rounded-lg pl-14 bg-gradient-to-r from-purple-400 h-full text-white'>
                                 <div className='space-y-8 lg:pt-16'>
-                                    <h2 data-aos="fade-right" data-aos-duration="2000" className='lg:text-6xl mt-4 lg:mt-20 font-bold'>Welcome To Elite View</h2>
-                                    <p data-aos="fade-right" data-aos-duration="3000" className='text-3xl lg:w-[50%]'>Experience the pinnacle of luxury with Elite View properties. Revel in exquisite design, breathtaking views, and unparalleled sophistication at every turn.</p>
+                                    <h2 data-aos="fade-right" data-aos-duration="2000" className='lg:text-6xl md:text-3xl mt-4 lg:mt-20 font-bold'>Welcome To Elite View</h2>
+                                    <p data-aos="fade-right" data-aos-duration="3000" className='md:text-lg lg:text-3xl lg:w-[50%]'>Experience the pinnacle of luxury with Elite View properties. Revel in exquisite design, breathtaking views, and unparalleled sophistication at every turn.</p>
                                 </div>
                             </div>
                             <img className='rounded-lg' src={image1} alt="" />
@@ -45,8 +45,8 @@ const Home = () => {
                         <SwiperSlide>
                             <div className='absolute w-full z-10 rounded-lg pl-14 bg-gradient-to-r from-purple-400 h-full text-white'>
                                 <div className='space-y-8 lg:pt-16'>
-                                    <h2 className='lg:text-6xl mt-4 lg:mt-20 font-bold'>Welcome To Elite View</h2>
-                                    <p className='text-3xl lg:w-[50%]'>Experience the pinnacle of luxury with Elite View properties. Revel in exquisite design, breathtaking views, and unparalleled sophistication at every turn.</p>
+                                    <h2 className='lg:text-6xl md:text-3xl mt-4 lg:mt-20 font-bold'>Welcome To Elite View</h2>
+                                    <p className='lg:text-3xl md:text-lg lg:w-[50%]'>Experience the pinnacle of luxury with Elite View properties. Revel in exquisite design, breathtaking views, and unparalleled sophistication at every turn.</p>
                                 </div>
                             </div>
                             <img className='rounded-lg' src={image2} alt="" />
@@ -54,8 +54,8 @@ const Home = () => {
                         <SwiperSlide>
                             <div className='absolute w-full z-10 rounded-lg pl-14 bg-gradient-to-r from-purple-400 h-full text-white'>
                                 <div className='space-y-8 lg:pt-16'>
-                                    <h2 className='lg:text-6xl mt-4 lg:mt-20 font-bold'>Welcome To Elite View</h2>
-                                    <p className='text-3xl lg:w-[50%]'>Experience the pinnacle of luxury with Elite View properties. Revel in exquisite design, breathtaking views, and unparalleled sophistication at every turn.</p>
+                                    <h2 className='lg:text-6xl md:text-3xl mt-4 lg:mt-20 font-bold'>Welcome To Elite View</h2>
+                                    <p className='md:text-lg lg:text-3xl lg:w-[50%]'>Experience the pinnacle of luxury with Elite View properties. Revel in exquisite design, breathtaking views, and unparalleled sophistication at every turn.</p>
                                 </div>
                             </div>
                             <img className='rounded-lg' src={image3} alt="" />
@@ -63,8 +63,8 @@ const Home = () => {
                         <SwiperSlide>
                             <div className='absolute w-full z-10 rounded-lg pl-14 bg-gradient-to-r from-purple-400 h-full text-white'>
                                 <div className='space-y-8 lg:pt-16'>
-                                    <h2 className='lg:text-6xl mt-4 lg:mt-20 font-bold'>Welcome To Elite View</h2>
-                                    <p className='text-3xl lg:w-[50%]'>Experience the pinnacle of luxury with Elite View properties. Revel in exquisite design, breathtaking views, and unparalleled sophistication at every turn.</p>
+                                    <h2 className='lg:text-6xl md:text-3xl mt-4 lg:mt-20 font-bold'>Welcome To Elite View</h2>
+                                    <p className='md:text-lg lg:text-3xl lg:w-[50%]'>Experience the pinnacle of luxury with Elite View properties. Revel in exquisite design, breathtaking views, and unparalleled sophistication at every turn.</p>
                                 </div>
                             </div>
                             <img className='rounded-lg' src={image4} alt="" />

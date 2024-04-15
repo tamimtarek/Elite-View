@@ -1,14 +1,18 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 const Login = () => {
     const [success, setSuccess] = useState('');
     const [displayError, setDisplayError] = useState('')
     const { login, googleUser, facebookUser } = useContext(AuthContext);
-
+    const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
     const handleLogin = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
@@ -20,6 +24,7 @@ const Login = () => {
         login(email, password)
             .then(() => {
                 toast("Login Successfull")
+                navigate(location?.state || "/")
             })
             .catch(error => {
                 toast.warning(error.message)
@@ -31,6 +36,7 @@ const Login = () => {
         googleUser()
             .then(() => {
                 toast.success('Google Login Success')
+                navigate(location?.state || "/")
             })
             .catch(error => toast.warning(error.message))
     }
@@ -39,6 +45,7 @@ const Login = () => {
         facebookUser()
             .then(() => {
                 toast.success('Facebook Login Success')
+                navigate(location?.state || "/")
             })
             .catch(error => {
                 toast.warning(error.message)
@@ -47,7 +54,7 @@ const Login = () => {
 
     return (
         <div>
-            <div data-aos="zoom-in-up" data-aos-duration="1000"  className="flex mx-auto mt-10 flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-200 dark:text-gray-800">
+            <div data-aos="zoom-in-up" data-aos-duration="1000" className="flex mx-auto mt-10 flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-200 dark:text-gray-800">
                 <Helmet>
                     <title>
                         Elite View | Login
@@ -67,7 +74,18 @@ const Login = () => {
                                 <label htmlFor="password" className="text-sm">Password</label>
                                 <a rel="noopener noreferrer" href="#" className="text-xs hover:underline dark:text-gray-600">Forgot password?</a>
                             </div>
-                            <input type="password" name="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
+                            <span onClick={() => setShowPassword(!showPassword)}>
+                                {showPassword ? (
+                                    <h1 className="flex items-center gap-1">
+                                        hide <FaEyeSlash />
+                                    </h1>
+                                ) : (
+                                    <h1 className="flex items-center gap-1">
+                                        show <FaEye />
+                                    </h1>
+                                )}
+                            </span>
+                            <input type={showPassword ? "text" : "password"} name="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
                         </div>
                         {
                             success && <p className="text-green-600 text-sm">{success}</p>
@@ -89,7 +107,7 @@ const Login = () => {
                     </div>
                 </form>
             </div>
-                <ToastContainer></ToastContainer>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

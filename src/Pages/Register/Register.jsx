@@ -1,13 +1,16 @@
 import { useContext, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 const Register = () => {
     const { createUser, setReload, updateUserProfile } = useContext(AuthContext);
-
-
+    const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
     const handleRegister = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
@@ -16,6 +19,7 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('createPassword');
         const confirmPassword = form.get('confirmPassword');
+
         console.log(name, photo, email, password);
 
         if (!/@gmail\.com$/.test(email)) {
@@ -44,7 +48,7 @@ const Register = () => {
                 updateUserProfile(name, photo)
                     .then(
                         toast.success("Successfully create your account"),
-                        setReload(true)
+                        navigate(location?.state || "/")
                     )
 
                 e.target.reset();
@@ -80,8 +84,19 @@ const Register = () => {
                             <input type="email" required name="email" id="email" placeholder="Your Email" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
                         </div>
                         <div>
+                            <span onClick={() => setShowPassword(!showPassword)}>
+                                {showPassword ? (
+                                    <h1 className="flex items-center gap-1">
+                                        hide <FaEyeSlash />
+                                    </h1>
+                                ) : (
+                                    <h1 className="flex items-center gap-1">
+                                        show <FaEye />
+                                    </h1>
+                                )}
+                            </span>
                             <label htmlFor="createPassword" className="block mb-2 text-sm">Create Password</label>
-                            <input type="password" required name="createPassword" placeholder="Create Password" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
+                            <input type={showPassword ? "text" : "password"} required name="createPassword" placeholder="Create Password" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
                         </div>
                         <div>
                             <label htmlFor="confirmPassword" className="block mb-2 text-sm">Confirm Password</label>
@@ -99,7 +114,7 @@ const Register = () => {
                     </div>
                 </form>
             </div>
-                <ToastContainer></ToastContainer>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
