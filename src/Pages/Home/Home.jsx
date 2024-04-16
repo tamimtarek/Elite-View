@@ -16,7 +16,7 @@ import { Helmet } from 'react-helmet';
 const Home = () => {
     const { cards } = useContext(AuthContext);
     return (
-        <div className='lg:w-[1280px] border mx-auto'>
+        <div className='lg:w-[1280px] mx-auto'>
             <Helmet>
                 <title>
                     Elite View | Home
@@ -24,7 +24,7 @@ const Home = () => {
             </Helmet>
             <div >
 
-                <div data-aos="zoom-in-down" className='relative border z-0 rounded-lg'>
+                <div data-aos="zoom-in-down" className='relative z-0 rounded-lg'>
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar]}
                         spaceBetween={80}

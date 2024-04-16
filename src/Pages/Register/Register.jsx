@@ -22,10 +22,6 @@ const Register = () => {
 
         console.log(name, photo, email, password);
 
-        if (!/@gmail\.com$/.test(email)) {
-            toast.warning('Email ends With @gmail.com')
-            return
-        }
 
         if (!/[A-Z]/.test(password)) {
             return toast.warning('You Must use an uppercase in the password')
@@ -48,7 +44,8 @@ const Register = () => {
                 updateUserProfile(name, photo)
                     .then(
                         toast.success("Successfully create your account"),
-                        navigate(location?.state || "/")
+                        navigate(location?.state || "/"),
+                        setReload(true)
                     )
 
                 e.target.reset();
