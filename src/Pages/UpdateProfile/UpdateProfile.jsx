@@ -17,9 +17,9 @@ const UpdateProfile = () => {
 
         updateUserProfile(name, photoUrl)
         .then(()=>{
-            toast.success("User Updated Success")
-            navigate(location?.state || "/"),
             setReload(true)
+            toast.success("User Updated Success")
+            navigate(location?.state || "/")
         })
         
     }

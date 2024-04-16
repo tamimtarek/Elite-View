@@ -6,7 +6,7 @@ const Cards = ({ card }) => {
     console.log(card)
     return (
         <div >
-            <div  className="card bg-base-100 h-full border-2">
+            <div  className="card bg-base-100 h-full border-2 animate__animated animate__backInUp">
                 <figure><img data-aos="zoom-in-up" data-aos-duration="3000" src={image} alt="comfort" /></figure>
                 <div className="card-body">
                     <h2 className="card-title flex justify-between">

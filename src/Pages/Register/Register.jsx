@@ -43,9 +43,9 @@ const Register = () => {
             .then(() => {
                 updateUserProfile(name, photo)
                     .then(
+                        setReload(true),
                         toast.success("Successfully create your account"),
                         navigate(location?.state || "/"),
-                        setReload(true)
                     )
 
                 e.target.reset();
