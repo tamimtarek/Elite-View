@@ -16,7 +16,7 @@ import { Helmet } from 'react-helmet';
 const Home = () => {
     const { cards } = useContext(AuthContext);
     return (
-        <div className='lg:w-[1280px] mx-auto'>
+        <div className='lg:w-[1280px] border mx-auto'>
             <Helmet>
                 <title>
                     Elite View | Home
@@ -24,7 +24,7 @@ const Home = () => {
             </Helmet>
             <div >
 
-                <div data-aos="zoom-in-down" className='relative z-0 rounded-lg'>
+                <div data-aos="zoom-in-down" className='relative border z-0 rounded-lg'>
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar]}
                         spaceBetween={80}
@@ -71,7 +71,7 @@ const Home = () => {
                         </SwiperSlide>
                     </Swiper>
                 </div>
-                <div className='text-center lg:w-[1200px] mx-auto mt-8'>
+                <div className='text-center lg:w-[1200px] mx-auto mt-8 border'>
                     <h1 className='text-lg mb-6 md:text-2xl lg:text-4xl  font-semibold'>Find Your Comfort</h1>
                     <p>Add your dream property to the cart. Find your comfort with Elite View, where luxury meets <br /> tranquility in every exquisite detail.</p>
                     <div className='mt-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 justify-center'>
@@ -82,7 +82,7 @@ const Home = () => {
                 </div>
                 <div className='text-center mt-7 flex flex-col justify-center items-center'>
                     <h3 className='text-lg md:text-2xl lg:text-4xl font-semibold'>Review</h3>
-                    <p>Review your selections with Elite View. Ensure your luxury property choice aligns perfectly <br />with your refined taste and lifestyle aspirations.</p>
+                    <p>Review your selections with Elite View. Ensure your luxury property<br /> choice aligns perfectly with your refined taste and lifestyle aspirations.</p>
                     <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-5'>
                         <div className="container border flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
                             <div className="flex justify-between p-4">
